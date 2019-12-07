@@ -1,1 +1,23 @@
 <!-- after_header.html -->
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/above-main-container/featured-topics"
+>
+
+  {{#if displayfeaturedTopics}}
+  <!-- If our component is true, show this content: -->
+
+      <div class="custom-featured-topics-wrapper">
+        {{conditional-loading-spinner condition=loadingTopics}}
+        <!-- Show a loading spinner if topics are loading -->
+
+        {{#unless loadingTopics}}
+        <!-- Unless topics are still loading... -->
+          {{topic-list topics=featuredTopics showPosters=true}}
+          <!-- Show the topic list -->
+        {{/unless}}
+
+      </div>
+
+  {{/if}}
+</script>
