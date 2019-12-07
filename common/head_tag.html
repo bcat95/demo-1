@@ -12,6 +12,7 @@
       api.onPageChange((url, title) => {
         if ((url == "/") || (url == "/latest") ){
         // on page change, check if url matches
+        console.log(url);
         // if your homepage isn't /latest change this to /categories
         
           $('html').addClass('custom-featured-topics');
